@@ -2,33 +2,48 @@
 Grid tutorial styles
 ========================================================================== */
 
-/* Container ------------------------------------------------------------- */
-div#container, div.container { position: relative; width: 1000px; margin: 0 auto; padding: 0; }
+// grid-width function modified from Bourbon by thoughtbot, inc.
+// https://github.com/thoughtbot/bourbon
+@function grid-columns($n) {
+  @return $n * $gr-column-width + ($n - 1) * $grid-gutter-width;
+}
 
+// set up variables for grid functions. 6 column grid based on
+// http://elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/
+$grid-column-width: 15%;
+$grid-gutter-width: 2%;
 
-/* Grid ------------------------------------------------------------------ */
-.column-row, .row {   margin: 0 0 18px -20px; }
-.column, .columns {   float: left; display: inline; margin: 0 0 0 20px; }
+.container { // outer container to constrain our layout
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
 
-.one {                width: 150px; }
-.two {                width: 320px; }
-.three {              width: 490px; }
-.four {               width: 660px; }
-.five {               width: 830px; }
-.six {                width: 1000px; }
+@mixin clearfix { // micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}
 
-.offset-by-one-half { margin-left: 85px; }
-.offset-by-one {      margin-left: 170px; }
-.offset-by-two {      margin-left: 340px; }
-.offset-by-three {    margin-left: 510px; }
-.offset-by-four {     margin-left: 680px; }
+@mixin pull-right { float: right; }
+@mixin pull-left { float: left; }
+@mixin row { margin: 0 0 0 0; } // reset margins to accomodate things going outside of them
 
-/* Clear the columns automagically, thanks @kneath */
-.column-row:after, .row:after, .clearfix:after {    content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-* html .column-row, * html .row, * html .clearfix { height: 1%; }
-.column-row, .row, .clearfix {                      display: inline-block; }
-.column-row, .row, .clearfix {                      display: block; }
+.column {
+  float: left;
+  display: inline;
+  margin: 0 0 0 20px;
+}
 
-/*  IE6 Problems ---------- */
-body.ie .column-row {                               width: 1020px; }
-body.ie .two-thirds .column-row {                   width: 1380px; }
+.one {                width: 15%; }
+.two {                width: 32%; }
+.three {              width: 49%; }
+.four {               width: 66%; }
+.five {               width: 83%; }
+.six {                width: 100%; }
+
+.offset-by-one {      margin-left: 17%; }
+.offset-by-two {      margin-left: 34%; }
+.offset-by-three {    margin-left: 51%; }
+.offset-by-four {     margin-left: 68%; }

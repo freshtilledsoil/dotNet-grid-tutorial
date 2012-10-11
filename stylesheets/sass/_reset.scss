@@ -30,8 +30,11 @@ section {
 audio,
 canvas,
 video {
-  @include inline-block();
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
   *display: inline;
+  *vertical-align: auto;
   *zoom: 1;
 }
 
@@ -132,4 +135,3 @@ textarea {
   overflow: auto; // Remove vertical scrollbar in IE6-9
   vertical-align: top; // Readability and alignment cross-browser
 }
-
