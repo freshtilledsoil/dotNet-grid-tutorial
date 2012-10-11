@@ -1,3 +1,34 @@
 /* ==========================================================================
 Grid tutorial styles
 ========================================================================== */
+
+/* Container ------------------------------------------------------------- */
+div#container, div.container { position: relative; width: 1000px; margin: 0 auto; padding: 0; }
+
+
+/* Grid ------------------------------------------------------------------ */
+.column-row, .row {   margin: 0 0 18px -20px; }
+.column, .columns {   float: left; display: inline; margin: 0 0 0 20px; }
+
+.one {                width: 150px; }
+.two {                width: 320px; }
+.three {              width: 490px; }
+.four {               width: 660px; }
+.five {               width: 830px; }
+.six {                width: 1000px; }
+
+.offset-by-one-half { margin-left: 85px; }
+.offset-by-one {      margin-left: 170px; }
+.offset-by-two {      margin-left: 340px; }
+.offset-by-three {    margin-left: 510px; }
+.offset-by-four {     margin-left: 680px; }
+
+/* Clear the columns automagically, thanks @kneath */
+.column-row:after, .row:after, .clearfix:after {    content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix {                      display: inline-block; }
+.column-row, .row, .clearfix {                      display: block; }
+
+/*  IE6 Problems ---------- */
+body.ie .column-row {                               width: 1020px; }
+body.ie .two-thirds .column-row {                   width: 1380px; }
