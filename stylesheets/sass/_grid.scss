@@ -4,21 +4,15 @@ Grid tutorial styles
 
 // grid-width function modified from Bourbon by thoughtbot, inc.
 // https://github.com/thoughtbot/bourbon
-@function grid-columns($n) {
+@function grid-width($n) {
   @return $n * $gr-column-width + ($n - 1) * $grid-gutter-width;
 }
 
 // set up variables for grid functions. 6 column grid based on
 // http://elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/
+$grid-columns:      6;
 $grid-column-width: 15%;
 $grid-gutter-width: 2%;
-
-.container { // outer container to constrain our layout
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-}
 
 @mixin clearfix { // micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
   zoom: 1;
@@ -28,22 +22,17 @@ $grid-gutter-width: 2%;
 
 @mixin pull-right { float: right; }
 @mixin pull-left { float: left; }
-@mixin row { margin: 0 0 0 0; } // reset margins to accomodate things going outside of them
-
-.column {
-  float: left;
-  display: inline;
-  margin: 0 0 0 20px;
+@mixin row { margin-left: -($grid-gutter-width); } // reset margins to accomodate things going outside of them
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.one {                width: 15%; }
-.two {                width: 32%; }
-.three {              width: 49%; }
-.four {               width: 66%; }
-.five {               width: 83%; }
-.six {                width: 100%; }
+@function offset($side, $columns) { // $side is left or right, $columns is number of columns of offset
+  @return $side; // not doing anything yet, just prevents it from throwing an error on compile
+}
 
-.offset-by-one {      margin-left: 17%; }
-.offset-by-two {      margin-left: 34%; }
-.offset-by-three {    margin-left: 51%; }
-.offset-by-four {     margin-left: 68%; }
+.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }

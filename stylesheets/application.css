@@ -284,41 +284,6 @@ Grid tutorial styles
   margin: 0 auto;
   padding: 0; }
 
-.column {
-  float: left;
-  display: inline;
-  margin: 0 0 0 20px; }
-
-.one {
-  width: 15%; }
-
-.two {
-  width: 32%; }
-
-.three {
-  width: 49%; }
-
-.four {
-  width: 66%; }
-
-.five {
-  width: 83%; }
-
-.six {
-  width: 100%; }
-
-.offset-by-one {
-  margin-left: 17%; }
-
-.offset-by-two {
-  margin-left: 34%; }
-
-.offset-by-three {
-  margin-left: 51%; }
-
-.offset-by-four {
-  margin-left: 68%; }
-
 /* ==========================================================================
 Major section comment type. These will output to .css file when compiled
 ========================================================================== */
