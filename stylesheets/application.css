@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -258,7 +263,7 @@ pre {
 code {
   padding: 3px 4px;
   color: #9d261d;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   border: 1px solid #999999; }
 
 pre {
@@ -267,7 +272,7 @@ pre {
   margin: 0 0 9px;
   font-size: 12px;
   line-height: 18px;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
@@ -288,6 +293,9 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
+/* ==========================================================================
+Grid tutorial styles
+========================================================================== */
 /* ==========================================================================
 Major section comment type. These will output to .css file when compiled
 ========================================================================== */
