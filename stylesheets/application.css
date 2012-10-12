@@ -383,12 +383,20 @@ em {
 /* ==========================================================================
 Grid tutorial styles
 ========================================================================== */
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0; }
-
 /* ==========================================================================
 Major section comment type. These will output to .css file when compiled
 ========================================================================== */
+div.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+section.hero {
+  height: 12em;
+  background-color: #555555; }

@@ -2,16 +2,9 @@
 Major section comment type. These will output to .css file when compiled
 ========================================================================== */
 
+div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; @include border-box; }
 
-
-
-// Minor section comment type. Will not output to .css file ============== //
-
-
-
-
-// Inline comment. Will not output to .css file
-
-
-
-
+section.hero {
+  height: 12em;
+  background-color: $gray;
+}

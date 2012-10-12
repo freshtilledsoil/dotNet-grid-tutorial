@@ -35,4 +35,4 @@ $grid-gutter-width: 2%;
   @return $side; // not doing anything yet, just prevents it from throwing an error on compile
 }
 
-.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
+@mixin row { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
