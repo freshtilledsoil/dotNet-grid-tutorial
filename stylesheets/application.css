@@ -371,7 +371,7 @@ li {
 hr {
   margin: 1em 0;
   border: 0;
-  border-top: 1px solid #555555;
+  border-top: 1px solid gray;
   border-bottom: 1px solid white; }
 
 strong {
@@ -397,11 +397,18 @@ div.container {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
+header.banner {
+  background-color: #e6e6e6;
+  margin-bottom: 1.4em; }
+
 section.hero {
-  height: 12em;
-  background-color: #555555; }
+  height: 14em;
+  background-color: #666666;
+  margin-bottom: 1.4em; }
 
 section.text-blocks {
+  background-color: #e6e6e6;
+  margin-bottom: 1.4em;
   zoom: 1; }
   section.text-blocks:before, section.text-blocks:after {
     content: "";
@@ -409,8 +416,8 @@ section.text-blocks {
   section.text-blocks:after {
     clear: both; }
   section.text-blocks div {
-    background-color: #555555;
-    padding: 1em;
+    background-color: #b3b3b3;
+    padding: 1.4em;
     margin-right: 2%;
     width: 32%;
     -webkit-box-sizing: border-box;
@@ -420,9 +427,12 @@ section.text-blocks {
     box-sizing: border-box;
     float: left; }
   section.text-blocks div:last-child {
-    margin-right: 0; }
+    margin-right: 0;
+    float: right; }
 
 section.descriptions {
+  background-color: #e6e6e6;
+  margin-bottom: 1.4em;
   zoom: 1; }
   section.descriptions:before, section.descriptions:after {
     content: "";
@@ -430,8 +440,8 @@ section.descriptions {
   section.descriptions:after {
     clear: both; }
   section.descriptions div {
-    background-color: #555555;
-    padding: 1em;
+    background-color: #b3b3b3;
+    padding: 1.4em;
     margin-right: 2%;
     width: 49%;
     -webkit-box-sizing: border-box;
@@ -441,9 +451,12 @@ section.descriptions {
     box-sizing: border-box;
     float: left; }
   section.descriptions div:last-child {
-    margin-right: 0; }
+    margin-right: 0;
+    float: right; }
 
 section.other-info {
+  background-color: #e6e6e6;
+  margin-bottom: 1.4em;
   zoom: 1; }
   section.other-info:before, section.other-info:after {
     content: "";
@@ -451,8 +464,8 @@ section.other-info {
   section.other-info:after {
     clear: both; }
   section.other-info div {
-    background-color: #555555;
-    padding: 1em;
+    background-color: #b3b3b3;
+    padding: 1.4em;
     margin-right: 2%;
     width: 15%;
     -webkit-box-sizing: border-box;
@@ -462,8 +475,9 @@ section.other-info {
     box-sizing: border-box;
     float: left; }
   section.other-info div:last-child {
-    margin-right: 0; }
+    margin-right: 0;
+    float: right; }
 
 footer.disclaimer {
-  margin-top: 2em;
+  background-color: #e6e6e6;
   text-align: center; }

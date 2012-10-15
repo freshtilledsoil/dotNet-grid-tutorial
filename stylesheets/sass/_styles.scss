@@ -4,17 +4,25 @@ Elements have been given semantic class names. Grid styles are pulled in with mi
 
 div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; @include border-box; }
 
+header.banner {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
+}
+
 section.hero {
-  height: 12em;
-  background-color: $gray;
+  height: 14em;
+  background-color: $gray60;
+  margin-bottom: 1.4em;
 }
 
 section.text-blocks {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
   @include clearfix;
 
   div {
-    background-color: $gray;
-    padding: 1em;
+    background-color: $gray30;
+    padding: 1.4em;
     margin-right: 2%; //replace with grid-width function
     width: 32%; //replace with grid-width function
     @include border-box;
@@ -22,16 +30,19 @@ section.text-blocks {
   }
 
   div:last-child {
-    margin-right: 0;
+    margin-right: 0;     // remove margin-right for proper alignment
+    @include pull-right; // float last element right to defeat percentage misalignment
   }
 }
 
 section.descriptions {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
   @include clearfix;
 
   div {
-    background-color: $gray;
-    padding: 1em;
+    background-color: $gray30;
+    padding: 1.4em;
     margin-right: 2%; //replace with grid-width function
     width: 49%; //replace with grid-width function
     @include border-box;
@@ -39,16 +50,19 @@ section.descriptions {
   }
 
   div:last-child {
-    margin-right: 0;
+    margin-right: 0;     // remove margin-right for proper alignment
+    @include pull-right; // float last element right to defeat percentage misalignment
   }
 }
 
 section.other-info {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
   @include clearfix;
 
   div {
-    background-color: $gray;
-    padding: 1em;
+    background-color: $gray30;
+    padding: 1.4em;
     margin-right: 2%; //replace with grid-width function
     width: 15%; //replace with grid-width function
     @include border-box;
@@ -56,11 +70,12 @@ section.other-info {
   }
 
   div:last-child {
-    margin-right: 0;
+    margin-right: 0;     // remove margin-right for proper alignment
+    @include pull-right; // float last element right to defeat percentage misalignment
   }
 }
 
 footer.disclaimer {
-  margin-top: 2em;
+  background-color: $gray10;
   text-align: center;
 }
