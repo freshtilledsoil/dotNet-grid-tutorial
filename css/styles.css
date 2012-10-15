@@ -227,8 +227,12 @@ section.offset-columns {
     background-color: #b3b3b3;
     padding: 1.4em; }
   section.offset-columns div.first-offset {
+    float: left;
+    margin-left: 17%;
     width: 15%; }
   section.offset-columns div.second-offset {
+    float: right;
+    margin-right: 34%;
     width: 32%; }
 
 footer.credit {

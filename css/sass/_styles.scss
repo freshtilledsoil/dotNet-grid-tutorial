@@ -136,10 +136,12 @@ section.offset-columns {
   }
 
   div.first-offset {
+    @include offset(left, 1); // set direction of offset and number of columns
     width: columns(1); // declare width in columns
   }
 
   div.second-offset {
+    @include offset(right, 2); // set direction of offset and number of columns
     width: columns(2); // declare width in columns
   }
 }

@@ -1,4 +1,4 @@
-// flexible grid function modified from Bourbon by thoughtbot, inc =============================== /
+// flexible grid functions modified from Bourbon by thoughtbot, inc ============================== /
 // http://thoughtbot.com/bourbon/#flex-grid ====================================================== /
 
 $max-width:       1000px; // set page max-width
@@ -15,6 +15,23 @@ $maximum-columns: 6;      // set max number of columns
 @function gutter($container-columns: $maximum-columns, $gutter: $gutter-width) {
   $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
   @return percentage($gutter / $container-width);
+}
+
+// calculate offset amounts for offset columns =================================================== /
+@function offset-columns($columns) {
+  $margin: $columns * $column-width + ($columns) * $gutter-width;
+  @return $margin;
+}
+
+@mixin offset($from-direction, $columns) {
+  @if $from-direction == left {
+    float: left;
+    margin-left: offset-columns($columns);
+  }
+  @if $from-direction == right {
+    float: right;
+    margin-right: offset-columns($columns);
+  }
 }
 
 // target nested elements with grid styles. use in global styles as well as row mixin ============ /
