@@ -1,7 +1,6 @@
-// Variables adapted from Twitter Bootstrap ============================== //
-// https://github.com/twitter/bootstrap/ ================================= //
+// Variables ===================================================================
 
-// Grays
+// White - Grays - Black
 $black:                       hsl(0, 0%, 0%);
 $gray90:                      hsl(0, 0%, 10%);
 $gray80:                      hsl(0, 0%, 20%);
@@ -14,14 +13,6 @@ $gray20:                      hsl(0, 0%, 80%);
 $gray10:                      hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-// Accent colors
-$blueDark:                    #0064cd;
-$purple:                      #7a43b6;
-
-// Typography
+// Typography variables
 $baseColor:                   $black;
-$headerFontFamily:            "Helvetica Neue", Helvetica, Arial, sans-serif;
-$textFontFamily:              "Helvetica Neue", Helvetica, Arial, sans-serif;
-$codeFontFamily:              Menlo, Monaco, "Courier New", monospace;
-$linkColor:                   $blueDark;
-$linkColorHover:              darken($linkColor, 15%);
+$fontFamily:                  sans-serif;

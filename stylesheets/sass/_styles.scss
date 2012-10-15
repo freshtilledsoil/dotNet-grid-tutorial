@@ -1,11 +1,15 @@
 /* =============================================================================
-Elements should have semantic class names. Grid styles are pulled in with mixins
+Global styles
 ============================================================================= */
 
-// set up body and container padding/widths/etc
-body { padding: 0 1em;}
+// set up body and container padding/widths/etc ================================
+body { padding: 0 1em; margin: 0; }
 div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
 
+// tell your content elements to act like rows for containing columns ==========
+section.text-blocks, section.descriptions, section.other-info { @include row; }
+
+// declare non-grid-related styles for your elements ===========================
 header.banner {
   background-color: $gray10;
   margin-bottom: 1.4em;
@@ -17,10 +21,6 @@ section.hero {
   margin-bottom: 1.4em;
 }
 
-// tell your main content sections to act like rows for contained column elements
-section.text-blocks, section.descriptions, section.other-info { @include row; }
-
-// declare non-grid-related styles for your elements
 section.text-blocks {
   background-color: $gray10;
   margin-bottom: 1.4em;

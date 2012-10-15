@@ -1,23 +1,25 @@
 // Grid tutorial styles - all mixins, so it keeps your styles slim ======================
 
-// variables and function modified from https://github.com/thoughtbot/bourbon
-$grid-columns:      6;
-$grid-column-width: 15%;
-$grid-gutter-width: 2%;
+$grid-column-width: 15%; // set column width
+$grid-gutter-width: 2%;  // set gutter width
 
 @function columns($n) {
   @return $n * $grid-column-width + ($n - 1) * $grid-gutter-width;
 }
 
-// micro clearfix hack - should be a global mixin, but it's here for the sake of the tutorial
-@mixin clearfix {
+@mixin clearfix { // clearfix hack - should be global, but it's here for the tutorial
   zoom: 1;
   &:before, &:after { content: ""; display: table; }
   &:after { clear: both; }
 }
 
-// border-box mixin - ideally this is a global mixin, but it's alse here for the tutorial
-@mixin border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+// border-box mixin - ideally this is a global mixin, but it's also here for the tutorial
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 // row mixin includes clearfix hack, last-child margin fix and any global row styles
@@ -28,14 +30,14 @@ $grid-gutter-width: 2%;
   padding: 0;
   @include clearfix;
 
-  & > div {
+  & > div { // float only child elements left for grid. add more as necessary
     float: left;
     margin-right: $grid-gutter-width;
-    @include border-box;
+    @include border-box; // optional, but boy does it make life easier
   }
 
   *:last-child {
-    margin-right: 0;     // remove margin-right from last child element
+    margin-right: 0; // remove margin-right from last child element
     float: right; // float last element right to defeat percentage misalignment
   }
 }
