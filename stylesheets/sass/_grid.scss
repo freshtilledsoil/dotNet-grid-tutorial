@@ -20,10 +20,6 @@ $grid-gutter-width: 2%;
 @mixin border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
 }
 
-// set up mixins to float elements left and right
-@mixin pull-right { float: right; }
-@mixin pull-left { float: left; }
-
 // row mixin includes clearfix hack, last-child margin fix and any global row styles
 @mixin row {
   width: 100%;
@@ -40,7 +36,7 @@ $grid-gutter-width: 2%;
 
   *:last-child {
     margin-right: 0;     // remove margin-right from last child element
-    @include pull-right; // float last element right to defeat percentage misalignment
+    float: right; // float last element right to defeat percentage misalignment
   }
 }
 
