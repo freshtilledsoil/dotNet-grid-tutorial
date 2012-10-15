@@ -1,0 +1,38 @@
+// flexible grid function modified from Bourbon by thoughtbot, inc =============================== /
+// http://thoughtbot.com/bourbon/#flex-grid ====================================================== /
+
+$max-width:       1000px; // set page max-width
+$column-width:    15%;    // set column width
+$gutter-width:    2%;     // set gutter width
+$maximum-columns: 6;      // set max number of columns
+
+@function columns($columns, $container-columns: $maximum-columns) {
+  $width: $columns * $column-width + ($columns - 1) * $gutter-width;
+  $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+  @return percentage($width / $container-width);
+}
+
+@function gutter($container-columns: $maximum-columns, $gutter: $gutter-width) {
+  $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+  @return percentage($gutter / $container-width);
+}
+
+// row mixin includes clearfix hack, last-child margin fix and any global row styles ============= /
+@mixin row {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0;
+  @include clearfix;
+
+  & > div {
+    float: left;
+    margin-right: $gutter-width;
+    @include border-box;
+  }
+
+  *:last-child {
+    margin-right: 0;
+    float: right;
+  }
+}

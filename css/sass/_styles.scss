@@ -1,15 +1,17 @@
-/* =============================================================================
+/* =================================================================================================
 Global styles
-============================================================================= */
+================================================================================================= */
 
-// set up body and container padding/widths/etc ================================
+// set up body and container padding/widths/etc ================================================== /
 body { padding: 0 1em; margin: 0; }
 div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
 
-// tell your content elements to act like rows for containing columns ==========
+
+// tell your content elements to act like rows for containing columns ============================ /
 section.text-blocks, section.descriptions, section.other-info { @include row; }
 
-// declare non-grid-related styles for your elements ===========================
+
+// declare non-grid-related styles for your elements ============================================= /
 header.banner {
   background-color: $gray10;
   margin-bottom: 1.4em;
