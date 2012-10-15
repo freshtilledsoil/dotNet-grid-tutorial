@@ -17,6 +17,19 @@ $maximum-columns: 6;      // set max number of columns
   @return percentage($gutter / $container-width);
 }
 
+// target nested elements with grid styles. use in global styles as well as row mixin ============ /
+@mixin nesting {
+  & > div {
+    float: left;
+    margin-right: gutter();
+    @include border-box;
+  }
+  *:last-child {
+    margin-right: 0;
+    float: right;
+  }
+}
+
 // row mixin includes clearfix hack, last-child margin fix and any global row styles ============= /
 @mixin row {
   width: 100%;
@@ -24,15 +37,5 @@ $maximum-columns: 6;      // set max number of columns
   margin: 0 auto;
   padding: 0;
   @include clearfix;
-
-  & > div {
-    float: left;
-    margin-right: $gutter-width;
-    @include border-box;
-  }
-
-  *:last-child {
-    margin-right: 0;
-    float: right;
-  }
+  @include nesting;
 }

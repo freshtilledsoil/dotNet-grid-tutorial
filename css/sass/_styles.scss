@@ -8,7 +8,14 @@ div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
 
 
 // tell your content elements to act like rows for containing columns ============================ /
-section.text-blocks, section.descriptions, section.other-info { @include row; }
+section.three-columns,
+section.two-columns,
+section.six-columns,
+section.nested-columns,
+section.more-nested-columns,
+section.even-more-nested-columns {
+  @include row;
+}
 
 
 // declare non-grid-related styles for your elements ============================================= /
@@ -23,36 +30,111 @@ section.hero {
   margin-bottom: 1.4em;
 }
 
-section.text-blocks {
+section.three-columns {
   background-color: $gray10;
   margin-bottom: 1.4em;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    width: columns(2); // declare column width of elements
+    width: columns(2); // declare width in columns
   }
 }
 
-section.descriptions {
+section.two-columns {
   background-color: $gray10;
   margin-bottom: 1.4em;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    width: columns(3); // declare column width of elements
+    width: columns(3); // declare width in columns
   }
 }
 
-section.other-info {
+section.six-columns {
   background-color: $gray10;
   margin-bottom: 1.4em;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    width: columns(1); // declare column width of elements
+    width: columns(1); // declare width in columns
+  }
+}
+
+section.nested-columns {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
+
+  div.unnested {
+    background-color: $gray30;
+    padding: 1.4em;
+    width: columns(2); // declare width in columns
+  }
+
+  div.nested {
+    @include nesting;
+    width: columns(4); // declare width in columns
+
+    div {
+      background-color: $gray50;
+      padding: 1.4em;
+      width: columns(1, 4); // declare width in columns, plus width of parent in columns
+      margin-right: gutter(4); // declare gutter with width of parent in columns as argument
+    }
+  }
+}
+
+section.more-nested-columns {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
+
+  div.unnested {
+    background-color: $gray30;
+    padding: 1.4em;
+    width: columns(3); // declare width in columns
+  }
+
+  div.nested {
+    @include nesting;
+    width: columns(3); // declare width in columns
+
+    div {
+      background-color: $gray50;
+      padding: 1.4em;
+      width: columns(1, 3); // declare width in columns, plus width of parent in columns
+      margin-right: gutter(3); // declare gutter with width of parent in columns as argument
+    }
+  }
+}
+
+section.even-more-nested-columns {
+  background-color: $gray10;
+  margin-bottom: 1.4em;
+
+  div.first-unnested {
+    background-color: $gray30;
+    padding: 1.4em;
+    width: columns(2); // declare width in columns
+  }
+
+  div.nested {
+    @include nesting;
+    width: columns(3); // declare width in columns
+
+    div {
+      background-color: $gray50;
+      padding: 1.4em;
+      width: columns(1, 2); // declare width in columns, plus width of parent in columns
+      margin-right: gutter(2); // declare gutter with width of parent in columns as argument
+    }
+  }
+
+  div.second-unnested {
+    background-color: $gray30;
+    padding: 1.4em;
+    width: columns(1); // declare width in columns
   }
 }
 
