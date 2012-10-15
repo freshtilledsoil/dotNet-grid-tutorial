@@ -1,37 +1,49 @@
-/* ==========================================================================
-Grid tutorial styles
-========================================================================== */
+// Grid tutorial styles - all mixins, so it keeps your styles slim ======================
 
-// variables for grid function. 6 column grid based on
-// http://elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/
+// variables and function modified from https://github.com/thoughtbot/bourbon
 $grid-columns:      6;
 $grid-column-width: 15%;
 $grid-gutter-width: 2%;
 
-// columns function modified from Bourbon by thoughtbot - https://github.com/thoughtbot/bourbon
 @function columns($n) {
   @return $n * $grid-column-width + ($n - 1) * $grid-gutter-width;
 }
 
-@mixin clearfix { // micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
+// micro clearfix hack - should be a global mixin, but it's here for the sake of the tutorial
+@mixin clearfix {
   zoom: 1;
   &:before, &:after { content: ""; display: table; }
   &:after { clear: both; }
 }
 
+// border-box mixin - ideally this is a global mixin, but it's alse here for the tutorial
+@mixin border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+// set up mixins to float elements left and right
 @mixin pull-right { float: right; }
 @mixin pull-left { float: left; }
-@mixin row { margin-left: -($grid-gutter-width); } // reset margins to accomodate things going outside of them
-@mixin border-box {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
+
+// row mixin includes clearfix hack, last-child margin fix and any global row styles
+@mixin row {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  @include clearfix;
+
+  & > div {
+    float: left;
+    margin-right: $grid-gutter-width;
+    @include border-box;
+  }
+
+  *:last-child {
+    margin-right: 0;     // remove margin-right from last child element
+    @include pull-right; // float last element right to defeat percentage misalignment
+  }
 }
 
 @function offset($side, $columns) { // $side is left or right, $columns is number of columns of offset
   @return $side; // not doing anything yet, just prevents it from throwing an error on compile
 }
-
-@mixin row { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }

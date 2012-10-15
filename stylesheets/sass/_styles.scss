@@ -2,7 +2,9 @@
 Elements should have semantic class names. Grid styles are pulled in with mixins
 ============================================================================= */
 
-div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; }
+// set up body and container padding/widths/etc
+body { padding: 0 1em;}
+div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
 
 header.banner {
   background-color: $gray10;
@@ -15,63 +17,40 @@ section.hero {
   margin-bottom: 1.4em;
 }
 
+// tell your main content sections to act like rows for contained column elements
+section.text-blocks, section.descriptions, section.other-info { @include row; }
+
+// declare non-grid-related styles for your elements
 section.text-blocks {
   background-color: $gray10;
   margin-bottom: 1.4em;
-  @include clearfix;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: $grid-gutter-width;
-    width: columns(2);
-    @include border-box;
-    @include pull-left;
-  }
-
-  div:last-child {
-    margin-right: 0;     // remove margin-right from last child element
-    @include pull-right; // float last element right to defeat percentage misalignment
+    width: columns(2); // declare column width of elements
   }
 }
 
 section.descriptions {
   background-color: $gray10;
   margin-bottom: 1.4em;
-  @include clearfix;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: $grid-gutter-width;
-    width: columns(3);
-    @include border-box;
-    @include pull-left;
-  }
-
-  div:last-child {
-    margin-right: 0;     // remove margin-right for proper alignment
-    @include pull-right; // float last element right to defeat percentage misalignment
+    width: columns(3); // declare column width of elements
   }
 }
 
 section.other-info {
   background-color: $gray10;
   margin-bottom: 1.4em;
-  @include clearfix;
 
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: $grid-gutter-width;
-    width: columns(1);
-    @include border-box;
-    @include pull-left;
-  }
-
-  div:last-child {
-    margin-right: 0;     // remove margin-right for proper alignment
-    @include pull-right; // float last element right to defeat percentage misalignment
+    width: columns(1); // declare column width of elements
   }
 }
 
