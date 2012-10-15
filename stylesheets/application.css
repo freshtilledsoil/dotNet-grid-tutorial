@@ -383,9 +383,9 @@ em {
 /* ==========================================================================
 Grid tutorial styles
 ========================================================================== */
-/* ==========================================================================
-Major section comment type. These will output to .css file when compiled
-========================================================================== */
+/* =================================================================================
+Elements have been given semantic class names. Grid styles are pulled in with mixins
+================================================================================= */
 div.container {
   width: 100%;
   max-width: 1000px;
@@ -400,3 +400,70 @@ div.container {
 section.hero {
   height: 12em;
   background-color: #555555; }
+
+section.text-blocks {
+  zoom: 1; }
+  section.text-blocks:before, section.text-blocks:after {
+    content: "";
+    display: table; }
+  section.text-blocks:after {
+    clear: both; }
+  section.text-blocks div {
+    background-color: #555555;
+    padding: 1em;
+    margin-right: 2%;
+    width: 32%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; }
+  section.text-blocks div:last-child {
+    margin-right: 0; }
+
+section.descriptions {
+  zoom: 1; }
+  section.descriptions:before, section.descriptions:after {
+    content: "";
+    display: table; }
+  section.descriptions:after {
+    clear: both; }
+  section.descriptions div {
+    background-color: #555555;
+    padding: 1em;
+    margin-right: 2%;
+    width: 49%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; }
+  section.descriptions div:last-child {
+    margin-right: 0; }
+
+section.other-info {
+  zoom: 1; }
+  section.other-info:before, section.other-info:after {
+    content: "";
+    display: table; }
+  section.other-info:after {
+    clear: both; }
+  section.other-info div {
+    background-color: #555555;
+    padding: 1em;
+    margin-right: 2%;
+    width: 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; }
+  section.other-info div:last-child {
+    margin-right: 0; }
+
+footer.disclaimer {
+  margin-top: 2em;
+  text-align: center; }

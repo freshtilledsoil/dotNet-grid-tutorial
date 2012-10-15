@@ -1,10 +1,66 @@
-/* ==========================================================================
-Major section comment type. These will output to .css file when compiled
-========================================================================== */
+/* =================================================================================
+Elements have been given semantic class names. Grid styles are pulled in with mixins
+================================================================================= */
 
 div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; @include border-box; }
 
 section.hero {
   height: 12em;
   background-color: $gray;
+}
+
+section.text-blocks {
+  @include clearfix;
+
+  div {
+    background-color: $gray;
+    padding: 1em;
+    margin-right: 2%; //replace with grid-width function
+    width: 32%; //replace with grid-width function
+    @include border-box;
+    @include pull-left;
+  }
+
+  div:last-child {
+    margin-right: 0;
+  }
+}
+
+section.descriptions {
+  @include clearfix;
+
+  div {
+    background-color: $gray;
+    padding: 1em;
+    margin-right: 2%; //replace with grid-width function
+    width: 49%; //replace with grid-width function
+    @include border-box;
+    @include pull-left;
+  }
+
+  div:last-child {
+    margin-right: 0;
+  }
+}
+
+section.other-info {
+  @include clearfix;
+
+  div {
+    background-color: $gray;
+    padding: 1em;
+    margin-right: 2%; //replace with grid-width function
+    width: 15%; //replace with grid-width function
+    @include border-box;
+    @include pull-left;
+  }
+
+  div:last-child {
+    margin-right: 0;
+  }
+}
+
+footer.disclaimer {
+  margin-top: 2em;
+  text-align: center;
 }
