@@ -36,6 +36,8 @@ $maximum-columns: 6;      // set max number of columns
 
 // target nested elements with grid styles. use in global styles as well as row mixin ============ /
 @mixin nesting {
+  padding: 0; // remove padding from parent container so floated columns can fill it
+
   & > div {
     float: left;
     margin-right: gutter();

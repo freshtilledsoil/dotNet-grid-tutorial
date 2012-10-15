@@ -1,12 +1,12 @@
 /* =================================================================================================
-Typography
+Typography - limited rules for just this tutorial rather than a complete set
 ================================================================================================= */
 body {
   font-family: sans-serif;
   line-height: 1.375; }
 
 p {
-  margin: 0 0 1.4em 0;
+  margin: 0 0 1.375em 0;
   font-size: 1em;
   line-height: 1.375; }
 
@@ -24,43 +24,6 @@ h2 {
   font-size: 1.5em;
   line-height: 3.1;
   margin-bottom: -0.32em; }
-
-h3 {
-  line-height: 1em;
-  font-size: 1; }
-
-h4, h5, h6 {
-  line-height: 1; }
-
-h4 {
-  font-size: .85em; }
-
-h5 {
-  font-size: .75em; }
-
-h6 {
-  font-size: .75em;
-  color: #1a1a1a;
-  text-transform: uppercase; }
-
-ul, ol {
-  padding: 0;
-  margin: 0 0 1.4em 1em; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li {
-  line-height: 1.4; }
-
-strong {
-  font-weight: bold; }
-
-em {
-  font-style: italic; }
 
 /* =================================================================================================
 Global styles
@@ -85,7 +48,8 @@ section.offset-columns {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
-  zoom: 1; }
+  zoom: 1;
+  padding: 0; }
   section.two-columns:before, section.two-columns:after,
   section.six-columns:before,
   section.six-columns:after,
@@ -132,6 +96,9 @@ header.banner {
   background-color: #e6e6e6;
   margin-bottom: 1.375em; }
 
+section div {
+  padding: 1.8em 1em 0.93em 1em; }
+
 section.hero {
   height: 13.75em;
   background-color: #666666;
@@ -142,7 +109,6 @@ section.two-columns {
   margin-bottom: 1.375em; }
   section.two-columns div {
     background-color: #b3b3b3;
-    padding: 1.375em;
     width: 49%; }
 
 section.six-columns {
@@ -150,15 +116,13 @@ section.six-columns {
   margin-bottom: 1.375em; }
   section.six-columns div {
     background-color: #b3b3b3;
-    padding: 1.375em;
     width: 15%; }
 
 section.varying-columns {
   background-color: #e6e6e6;
   margin-bottom: 1.375em; }
   section.varying-columns div {
-    background-color: #b3b3b3;
-    padding: 1.375em; }
+    background-color: #b3b3b3; }
   section.varying-columns div.first-column {
     width: 15%; }
   section.varying-columns div.second-column {
@@ -170,6 +134,7 @@ section.nested-columns {
   background-color: #e6e6e6;
   margin-bottom: 1.375em; }
   section.nested-columns div.nested {
+    padding: 0;
     width: 49%; }
     section.nested-columns div.nested > div {
       float: left;
@@ -184,12 +149,10 @@ section.nested-columns {
       float: right; }
     section.nested-columns div.nested div {
       background-color: gray;
-      padding: 1.375em;
       width: 30.61224%;
       margin-right: 4.08163%; }
   section.nested-columns div.unnested {
     background-color: #b3b3b3;
-    padding: 1.375em;
     width: 49%; }
 
 section.more-nested-columns {
@@ -197,9 +160,9 @@ section.more-nested-columns {
   margin-bottom: 1.375em; }
   section.more-nested-columns div.first-unnested {
     background-color: #b3b3b3;
-    padding: 1.375em;
     width: 32%; }
   section.more-nested-columns div.second-nested {
+    padding: 0;
     width: 49%; }
     section.more-nested-columns div.second-nested > div {
       float: left;
@@ -214,20 +177,17 @@ section.more-nested-columns {
       float: right; }
     section.more-nested-columns div.second-nested div {
       background-color: gray;
-      padding: 1.375em;
       width: 46.875%;
       margin-right: 6.25%; }
   section.more-nested-columns div.third-unnested {
     background-color: #b3b3b3;
-    padding: 1.375em;
     width: 15%; }
 
 section.offset-columns {
   background-color: #e6e6e6;
   margin-bottom: 1.375em; }
   section.offset-columns div {
-    background-color: #b3b3b3;
-    padding: 1.375em; }
+    background-color: #b3b3b3; }
   section.offset-columns div.first-offset {
     float: left;
     margin-left: 17%;
@@ -239,4 +199,7 @@ section.offset-columns {
 
 footer.credit {
   background-color: #e6e6e6;
+  padding: 0.45em 0;
   text-align: center; }
+  footer.credit p {
+    margin: 0; }

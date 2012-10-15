@@ -14,15 +14,15 @@
   "use strict";
 
   var options = {
-    'pageWidth' :      '1000px',                       // set page width (added as max-width for flexible grids)
+    'pageWidth' :      '1000px',                      // set page width (added as max-width for flexible grids)
     'columnWidth' :    '150px',                       // set column width
     'columnColor' :    'rgba(255, 0, 0, 0.25)',       // set column color
     'gutterWidth' :    '20px',                        // set gutter width
     'gutterColor' :    'transparent',                 // set gutter color
     'widthUnits' :     'px',                          // set measurement units for column/gutter widths
     'baselineHeight' : '22px',                        // set baseline height
-    'baselineColor' :  'rgba(255, 255, 255, 0.5)',    // set baseline color
-    'initialDisplay' : 'block'                         // use 'block' to have grid visible by default
+    'baselineColor' :  'rgba(255, 255, 255, 1)',      // set baseline color
+    'initialDisplay' : 'block'                        // use 'block' to have grid visible by default
   },
   columnGradient = options.columnColor + ' 0, ' + options.columnColor + ' ' + parseInt(options.columnWidth, 10) + 'px, ' + options.gutterColor + ' ' + parseInt(options.columnWidth, 10) + 'px',
   baselineGradient = ( parseInt(options.baselineHeight, 10) - 1 ) + 'px, ' + options.baselineColor + ' ' + parseInt(options.baselineHeight, 10) + 'px',

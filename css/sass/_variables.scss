@@ -14,7 +14,7 @@ $gray10:                      hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
 // Typography variables
-$baseColor:                   $black;
-$fontFamily:                  sans-serif;
-$lineHeight:                  1.375;
-$verticalMeasure:             1.375em;
+$base-color:                  $black;
+$font-family:                 sans-serif;
+$line-height:                 1.375; // establish a consistent line-height equal to 22px
+$vertical-measure:            1.375em; // establish a vertical distance for margins equal to line-height
