@@ -2,12 +2,13 @@
 Typography
 ================================================================================================= */
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  line-height: 1.375; }
 
 p {
   margin: 0 0 1.4em 0;
   font-size: 1em;
-  line-height: 1.4em; }
+  line-height: 1.375; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -17,18 +18,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
-  line-height: 2.8em; }
+  line-height: 2.05; }
 
 h2 {
   font-size: 1.5em;
-  line-height: 2.8em; }
+  line-height: 3.1;
+  margin-bottom: -0.32em; }
 
 h3 {
   line-height: 1em;
-  font-size: 1em; }
+  font-size: 1; }
 
 h4, h5, h6 {
-  line-height: 1em; }
+  line-height: 1; }
 
 h4 {
   font-size: .85em; }
@@ -52,7 +54,7 @@ ol {
   list-style: decimal; }
 
 li {
-  line-height: 1.4em; }
+  line-height: 1.4; }
 
 strong {
   font-weight: bold; }
@@ -117,46 +119,46 @@ section.offset-columns {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box; }
-  section.two-columns *:last-child,
-  section.six-columns *:last-child,
-  section.varying-columns *:last-child,
-  section.nested-columns *:last-child,
-  section.more-nested-columns *:last-child,
-  section.offset-columns *:last-child {
+  section.two-columns div:last-child,
+  section.six-columns div:last-child,
+  section.varying-columns div:last-child,
+  section.nested-columns div:last-child,
+  section.more-nested-columns div:last-child,
+  section.offset-columns div:last-child {
     margin-right: 0;
     float: right; }
 
 header.banner {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
 
 section.hero {
-  height: 14em;
+  height: 13.75em;
   background-color: #666666;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
 
 section.two-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.two-columns div {
     background-color: #b3b3b3;
-    padding: 1.4em;
+    padding: 1.375em;
     width: 49%; }
 
 section.six-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.six-columns div {
     background-color: #b3b3b3;
-    padding: 1.4em;
+    padding: 1.375em;
     width: 15%; }
 
 section.varying-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.varying-columns div {
     background-color: #b3b3b3;
-    padding: 1.4em; }
+    padding: 1.375em; }
   section.varying-columns div.first-column {
     width: 15%; }
   section.varying-columns div.second-column {
@@ -166,7 +168,7 @@ section.varying-columns {
 
 section.nested-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.nested-columns div.nested {
     width: 49%; }
     section.nested-columns div.nested > div {
@@ -177,25 +179,25 @@ section.nested-columns {
       -ms-box-sizing: border-box;
       -o-box-sizing: border-box;
       box-sizing: border-box; }
-    section.nested-columns div.nested *:last-child {
+    section.nested-columns div.nested div:last-child {
       margin-right: 0;
       float: right; }
     section.nested-columns div.nested div {
       background-color: gray;
-      padding: 1.4em;
+      padding: 1.375em;
       width: 30.61224%;
       margin-right: 4.08163%; }
   section.nested-columns div.unnested {
     background-color: #b3b3b3;
-    padding: 1.4em;
+    padding: 1.375em;
     width: 49%; }
 
 section.more-nested-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.more-nested-columns div.first-unnested {
     background-color: #b3b3b3;
-    padding: 1.4em;
+    padding: 1.375em;
     width: 32%; }
   section.more-nested-columns div.second-nested {
     width: 49%; }
@@ -207,25 +209,25 @@ section.more-nested-columns {
       -ms-box-sizing: border-box;
       -o-box-sizing: border-box;
       box-sizing: border-box; }
-    section.more-nested-columns div.second-nested *:last-child {
+    section.more-nested-columns div.second-nested div:last-child {
       margin-right: 0;
       float: right; }
     section.more-nested-columns div.second-nested div {
       background-color: gray;
-      padding: 1.4em;
+      padding: 1.375em;
       width: 46.875%;
       margin-right: 6.25%; }
   section.more-nested-columns div.third-unnested {
     background-color: #b3b3b3;
-    padding: 1.4em;
+    padding: 1.375em;
     width: 15%; }
 
 section.offset-columns {
   background-color: #e6e6e6;
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.375em; }
   section.offset-columns div {
     background-color: #b3b3b3;
-    padding: 1.4em; }
+    padding: 1.375em; }
   section.offset-columns div.first-offset {
     float: left;
     margin-left: 17%;

@@ -41,7 +41,7 @@ $maximum-columns: 6;      // set max number of columns
     margin-right: gutter();
     @include border-box;
   }
-  *:last-child {
+  div:last-child {
     margin-right: 0;
     float: right;
   }

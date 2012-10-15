@@ -21,44 +21,44 @@ section.offset-columns {
 // declare non-grid-related styles for your elements ============================================= /
 header.banner {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 }
 
 section.hero {
-  height: 14em;
+  height: $verticalMeasure * 10;
   background-color: $gray60;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 }
 
 section.two-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
     width: columns(3); // declare width in columns
   }
 }
 
 section.six-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
     width: columns(1); // declare width in columns
   }
 }
 
 section.varying-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
   }
 
   div.first-column {
@@ -76,7 +76,7 @@ section.varying-columns {
 
 section.nested-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div.nested {
     @include nesting;
@@ -84,7 +84,7 @@ section.nested-columns {
 
     div {
       background-color: $gray50;
-      padding: 1.4em;
+      padding: $verticalMeasure;
       width: columns(1, 3); // declare width in columns, plus width of parent in columns
       margin-right: gutter(3); // declare gutter with width of parent in columns as argument
     }
@@ -92,18 +92,18 @@ section.nested-columns {
 
   div.unnested {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
     width: columns(3); // declare width in columns
   }
 }
 
 section.more-nested-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div.first-unnested {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
     width: columns(2); // declare width in columns
   }
 
@@ -113,7 +113,7 @@ section.more-nested-columns {
 
     div {
       background-color: $gray50;
-      padding: 1.4em;
+      padding: $verticalMeasure;
       width: columns(1, 2); // declare width in columns, plus width of parent in columns
       margin-right: gutter(2); // declare gutter with width of parent in columns as argument
     }
@@ -121,18 +121,18 @@ section.more-nested-columns {
 
   div.third-unnested {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
     width: columns(1); // declare width in columns
   }
 }
 
 section.offset-columns {
   background-color: $gray10;
-  margin-bottom: 1.4em;
+  margin-bottom: $verticalMeasure;
 
   div {
     background-color: $gray30;
-    padding: 1.4em;
+    padding: $verticalMeasure;
   }
 
   div.first-offset {
