@@ -133,11 +133,18 @@ section.offset-columns {
   div {
     background-color: $gray30;
     padding: 1.4em;
+  }
+
+  div.first-offset {
     width: columns(1); // declare width in columns
+  }
+
+  div.second-offset {
+    width: columns(2); // declare width in columns
   }
 }
 
-footer.disclaimer {
+footer.credit {
   background-color: $gray10;
   text-align: center;
 }
