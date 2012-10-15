@@ -383,19 +383,14 @@ em {
 /* ==========================================================================
 Grid tutorial styles
 ========================================================================== */
-/* =================================================================================
-Elements have been given semantic class names. Grid styles are pulled in with mixins
-================================================================================= */
+/* =============================================================================
+Elements should have semantic class names. Grid styles are pulled in with mixins
+============================================================================= */
 div.container {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  padding: 0 1em; }
 
 header.banner {
   background-color: #e6e6e6;

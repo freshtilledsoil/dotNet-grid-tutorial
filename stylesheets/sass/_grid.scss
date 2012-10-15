@@ -2,17 +2,16 @@
 Grid tutorial styles
 ========================================================================== */
 
-// grid-width function modified from Bourbon by thoughtbot, inc.
-// https://github.com/thoughtbot/bourbon
-@function grid-width($n) {
-  @return $n * $gr-column-width + ($n - 1) * $grid-gutter-width;
-}
-
-// set up variables for grid functions. 6 column grid based on
+// variables for grid function. 6 column grid based on
 // http://elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/
 $grid-columns:      6;
 $grid-column-width: 15%;
 $grid-gutter-width: 2%;
+
+// columns function modified from Bourbon by thoughtbot - https://github.com/thoughtbot/bourbon
+@function columns($n) {
+  @return $n * $grid-column-width + ($n - 1) * $grid-gutter-width;
+}
 
 @mixin clearfix { // micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
   zoom: 1;

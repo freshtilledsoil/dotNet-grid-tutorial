@@ -1,8 +1,8 @@
-/* =================================================================================
-Elements have been given semantic class names. Grid styles are pulled in with mixins
-================================================================================= */
+/* =============================================================================
+Elements should have semantic class names. Grid styles are pulled in with mixins
+============================================================================= */
 
-div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; @include border-box; }
+div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1em; }
 
 header.banner {
   background-color: $gray10;
@@ -23,14 +23,14 @@ section.text-blocks {
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: 2%; //replace with grid-width function
-    width: 32%; //replace with grid-width function
+    margin-right: $grid-gutter-width;
+    width: columns(2);
     @include border-box;
     @include pull-left;
   }
 
   div:last-child {
-    margin-right: 0;     // remove margin-right for proper alignment
+    margin-right: 0;     // remove margin-right from last child element
     @include pull-right; // float last element right to defeat percentage misalignment
   }
 }
@@ -43,8 +43,8 @@ section.descriptions {
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: 2%; //replace with grid-width function
-    width: 49%; //replace with grid-width function
+    margin-right: $grid-gutter-width;
+    width: columns(3);
     @include border-box;
     @include pull-left;
   }
@@ -63,8 +63,8 @@ section.other-info {
   div {
     background-color: $gray30;
     padding: 1.4em;
-    margin-right: 2%; //replace with grid-width function
-    width: 15%; //replace with grid-width function
+    margin-right: $grid-gutter-width;
+    width: columns(1);
     @include border-box;
     @include pull-left;
   }
