@@ -170,9 +170,10 @@ section.more-nested-columns {
       box-sizing: border-box; }
     section.more-nested-columns div.nested div {
       background-color: gray;
-      width: 46.875%;
-      margin-right: 6.25%; }
+      width: 30.61224%;
+      margin-right: 4.08163%; }
     section.more-nested-columns div.nested div.second-nested {
+      width: 65.30612%;
       margin-right: 0;
       float: right; }
   section.more-nested-columns div.second-unnested {
