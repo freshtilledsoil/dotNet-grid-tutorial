@@ -47,7 +47,6 @@ section.offset-columns {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0;
   zoom: 1;
   padding: 0; }
   section.two-columns:before, section.two-columns:after,
