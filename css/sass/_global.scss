@@ -4,7 +4,8 @@ Global styles
 
 // set up body and container padding/widths/etc ================================================== /
 body { padding: 0 1em; margin: 0; }
-div.container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; }
+div.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
+// do not use @include row; for your container. the direct child selectors will bork everything
 
 
 // tell your content elements to act like rows for containing columns ============================ /

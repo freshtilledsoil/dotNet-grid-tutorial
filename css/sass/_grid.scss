@@ -44,8 +44,10 @@ $maximum-columns: 6;      // set max number of columns
     @include border-box;
   }
   div:last-child {
-    margin-right: 0;
-    float: right;
+    margin-right: 0; // remove margin from last element so it fits. use nth-child for multiple rows
+  }
+  div.end {
+    margin-right: 0; // IE8 and below ruin the party. use this if you need IE8 support :(
   }
 }
 
