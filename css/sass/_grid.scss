@@ -38,17 +38,17 @@ $maximum-columns: 6;      // set max number of columns
 @mixin nesting {
   padding: 0; // remove padding from parent container so floated columns can fill it
 
-  & > div {
+  & > div { // target only child elements of the container. add elements other than div as needed
     float: left;
     margin-right: gutter();
     @include border-box;
   }
-  div:last-child {
-    margin-right: 0; // remove margin from last element so it fits. use nth-child for multiple rows
-  }
-  div.end {
-    margin-right: 0; // IE8 and below ruin the party. use this if you need IE8 support :(
-  }
+}
+
+// remove margin-right from last element in a row or container so all columns fit ================ /
+@mixin last {
+  margin-right: 0;
+  float: right; // fixes poor alignment with right edge caused by percentage calculations
 }
 
 // row mixin includes clearfix hack, last-child margin fix and any global row styles ============= /
