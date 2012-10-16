@@ -19,7 +19,7 @@ $maximum-columns: 6;      // set max number of columns
 
 // calculate offset amounts for offset columns =================================================== /
 @function offset-columns($columns) {
-  $margin: $columns * $column-width + ($columns) * $gutter-width;
+  $margin: $columns * $column-width + $columns * $gutter-width;
   @return $margin;
 }
 
