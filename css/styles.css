@@ -80,8 +80,6 @@ section.offset-columns {
     margin-right: 2%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box; }
 
 header.banner {
@@ -142,8 +140,6 @@ section.nested-columns {
       margin-right: 2%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      -o-box-sizing: border-box;
       box-sizing: border-box; }
     section.nested-columns div.nested div {
       background-color: gray;
@@ -172,8 +168,6 @@ section.more-nested-columns {
       margin-right: 2%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      -o-box-sizing: border-box;
       box-sizing: border-box; }
     section.more-nested-columns div.nested div {
       background-color: gray;
