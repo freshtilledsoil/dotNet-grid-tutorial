@@ -1,0 +1,23 @@
+/* =================================================================================================
+Typography - limited rules for just this tutorial rather than a complete set
+================================================================================================= */
+body {
+  font-family: sans-serif;
+  line-height: 1.375; }
+
+p {
+  margin: 0 0 1.375em 0;
+  font-size: 1em;
+  line-height: 1.375; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+  line-height: 2; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
