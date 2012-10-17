@@ -9,10 +9,6 @@ body { padding: 0 1em; margin: 0; }
 
 
 // declare non-grid-related styles for your elements ============================================= /
-[role="banner"] {
-  background-color: $gray10;
-}
-
 section div {
   padding: 1em 0;
 }
@@ -22,69 +18,29 @@ section div {
   background-color: $gray60;
 }
 
-.two-columns {
+[role="banner"],
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns,
+[role="contentinfo"] {
   background-color: $gray10;
 
   div {
-    background-color: $gray30;
-  }
-}
-
-.six-columns {
-  background-color: $gray10;
-
-  div {
-    background-color: $gray30;
-  }
-}
-
-.varying-columns {
-  background-color: $gray10;
-
-  div {
-    background-color: $gray30;
-  }
-}
-
-.nested-columns {
-  background-color: $gray10;
-
-  .nested {
-    div {
-      background-color: $gray50;
-    }
-  }
-  .unnested {
-    background-color: $gray30;
-  }
-}
-
-.more-nested-columns {
-  background-color: $gray10;
-
-  .first-unnested {
     background-color: $gray30;
   }
   .nested {
+    background-color: transparent;
+
     div {
       background-color: $gray50;
     }
-  }
-  .second-unnested {
-    background-color: $gray30;
-  }
-}
-
-.offset-columns {
-  background-color: $gray10;
-
-  div {
-    background-color: $gray30;
   }
 }
 
 [role="contentinfo"] {
-  background-color: $gray10;
   padding: 0.45em 0; // tweak to align contained elements to baseline
   text-align: center;
 

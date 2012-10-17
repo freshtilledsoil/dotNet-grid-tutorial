@@ -38,9 +38,6 @@ body {
   margin: 0 auto;
   padding: 0; }
 
-[role="banner"] {
-  background-color: #e6e6e6; }
-
 section div {
   padding: 1em 0; }
 
@@ -48,44 +45,44 @@ section div {
   height: 13.75em;
   background-color: #666666; }
 
-.two-columns {
+[role="banner"],
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns,
+[role="contentinfo"] {
   background-color: #e6e6e6; }
-  .two-columns div {
+  [role="banner"] div,
+  .two-columns div,
+  .six-columns div,
+  .varying-columns div,
+  .nested-columns div,
+  .more-nested-columns div,
+  .offset-columns div,
+  [role="contentinfo"] div {
     background-color: #b3b3b3; }
-
-.six-columns {
-  background-color: #e6e6e6; }
-  .six-columns div {
-    background-color: #b3b3b3; }
-
-.varying-columns {
-  background-color: #e6e6e6; }
-  .varying-columns div {
-    background-color: #b3b3b3; }
-
-.nested-columns {
-  background-color: #e6e6e6; }
-  .nested-columns .nested div {
-    background-color: gray; }
-  .nested-columns .unnested {
-    background-color: #b3b3b3; }
-
-.more-nested-columns {
-  background-color: #e6e6e6; }
-  .more-nested-columns .first-unnested {
-    background-color: #b3b3b3; }
-  .more-nested-columns .nested div {
-    background-color: gray; }
-  .more-nested-columns .second-unnested {
-    background-color: #b3b3b3; }
-
-.offset-columns {
-  background-color: #e6e6e6; }
-  .offset-columns div {
-    background-color: #b3b3b3; }
+  [role="banner"] .nested,
+  .two-columns .nested,
+  .six-columns .nested,
+  .varying-columns .nested,
+  .nested-columns .nested,
+  .more-nested-columns .nested,
+  .offset-columns .nested,
+  [role="contentinfo"] .nested {
+    background-color: transparent; }
+    [role="banner"] .nested div,
+    .two-columns .nested div,
+    .six-columns .nested div,
+    .varying-columns .nested div,
+    .nested-columns .nested div,
+    .more-nested-columns .nested div,
+    .offset-columns .nested div,
+    [role="contentinfo"] .nested div {
+      background-color: gray; }
 
 [role="contentinfo"] {
-  background-color: #e6e6e6;
   padding: 0.45em 0;
   text-align: center; }
   [role="contentinfo"] p {
