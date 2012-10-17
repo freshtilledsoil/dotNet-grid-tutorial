@@ -4,12 +4,12 @@ Global styles
 
 // set up body and container padding/widths/etc ================================================== /
 body { padding: 0 1em; margin: 0; }
-div.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
+.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
 // do not use the row mixin for your container. the direct child selectors will bork everything
 
 
 // declare non-grid-related styles for your elements ============================================= /
-header.banner {
+[role="banner"] {
   background-color: $gray10;
 }
 
@@ -17,12 +17,12 @@ section div {
   padding: 1em 0;
 }
 
-section.hero {
+.hero {
   height: $vertical-measure * 10;
   background-color: $gray60;
 }
 
-section.two-columns {
+.two-columns {
   background-color: $gray10;
 
   div {
@@ -30,7 +30,7 @@ section.two-columns {
   }
 }
 
-section.six-columns {
+.six-columns {
   background-color: $gray10;
 
   div {
@@ -38,7 +38,7 @@ section.six-columns {
   }
 }
 
-section.varying-columns {
+.varying-columns {
   background-color: $gray10;
 
   div {
@@ -46,41 +46,36 @@ section.varying-columns {
   }
 }
 
-section.nested-columns {
+.nested-columns {
   background-color: $gray10;
 
-  div.nested {
-
+  .nested {
     div {
       background-color: $gray50;
     }
   }
-
-  div.unnested {
+  .unnested {
     background-color: $gray30;
   }
 }
 
-section.more-nested-columns {
+.more-nested-columns {
   background-color: $gray10;
 
-  div.first-unnested {
+  .first-unnested {
     background-color: $gray30;
   }
-
-  div.nested {
-
+  .nested {
     div {
       background-color: $gray50;
     }
   }
-
-  div.second-unnested {
+  .second-unnested {
     background-color: $gray30;
   }
 }
 
-section.offset-columns {
+.offset-columns {
   background-color: $gray10;
 
   div {
@@ -88,7 +83,7 @@ section.offset-columns {
   }
 }
 
-footer.credit {
+[role="contentinfo"] {
   background-color: $gray10;
   padding: 0.45em 0; // tweak to align contained elements to baseline
   text-align: center;
@@ -100,17 +95,17 @@ footer.credit {
 
 @media screen and (min-width: 36em) {
 
-  section.two-columns,
-  section.six-columns,
-  section.varying-columns,
-  section.nested-columns,
-  section.more-nested-columns,
-  section.offset-columns {
+  .two-columns,
+  .six-columns,
+  .varying-columns,
+  .nested-columns,
+  .more-nested-columns,
+  .offset-columns {
     @include row; // don't behave like rows until the viewport is wider than 36ems
     margin-bottom: $vertical-measure;
   }
 
-  header.banner {
+  [role="banner"] {
     margin-bottom: $vertical-measure;
   }
 
@@ -118,89 +113,91 @@ footer.credit {
     padding: 1.8em 1em 0.93em 1em;
   }
 
-  section.hero {
+  .hero {
     margin-bottom: $vertical-measure;
   }
 
-  section.two-columns {
+  .two-columns {
     div {
       width: columns(3);
     }
-    div.right-column {
+    .right-column {
       @include last;
     }
   }
 
-  section.six-columns {
+  .six-columns {
     div {
       width: columns(1);
     }
-    div.sixth-column {
+    .sixth-column {
       @include last;
     }
   }
 
-  section.varying-columns {
-    div.first-column {
+  .varying-columns {
+    .first-column {
       width: columns(1);
     }
-    div.second-column {
+    .second-column {
       width: columns(2);
     }
-    div.third-column {
+    .third-column {
       width: columns(3);
     }
-    div.third-column {
+    .third-column {
       @include last;
     }
   }
 
-  section.nested-columns {
-    div.nested {
+  .nested-columns {
+    .nested {
       @include nesting;
       width: columns(3);
+
       div {
         width: columns(1, 3);
         margin-right: gutter(3);
       }
-      div.third-nested {
+      .third-nested {
         @include last;
       }
     }
-    div.unnested {
+    .unnested {
       width: columns(3);
       @include last;
     }
   }
 
-  section.more-nested-columns {
-    div.first-unnested {
+  .more-nested-columns {
+    .first-unnested {
       width: columns(2);
     }
-    div.nested {
+    .nested {
       @include nesting;
       width: columns(3);
+
       div {
         width: columns(1, 3);
         margin-right: gutter(3);
       }
-      div.second-nested {
+      .second-nested {
         width: columns(2, 3);
         @include last;
       }
     }
-    div.second-unnested {
+    .second-unnested {
       width: columns(1);
       @include last;
     }
   }
 
-  section.offset-columns {
-    div.first-offset {
+  .offset-columns {
+    .first-offset {
       @include offset(left, 1);
       width: columns(1);
     }
-    div.second-offset {
+    .second-offset {
       @include offset(right, 2);
       width: columns(2);
     }
