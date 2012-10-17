@@ -4,24 +4,24 @@ Global styles
 
 // set up body and container padding/widths/etc ================================================== /
 body { padding: 0 1em; margin: 0; }
-div.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
+.container { width: 100%; max-width: $max-width; margin: 0 auto; padding: 0; }
 // do not use the row mixin for your container. the direct child selectors will bork everything
 
 
 // tell your content elements to act like rows for containing columns ============================ /
-section.two-columns,
-section.six-columns,
-section.varying-columns,
-section.nested-columns,
-section.more-nested-columns,
-section.offset-columns {
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns {
   @include row;
 }
 // these can be set individually as well, I grouped them for the sake of brevity and DRY-ness
 
 
 // declare non-grid-related styles for your elements ============================================= /
-header.banner {
+[role="banner"] {
   background-color: $gray10;
   margin-bottom: 1em;
 }
@@ -30,13 +30,13 @@ section div {
   padding: 1em;
 }
 
-section.hero {
+.hero {
   height: 14em;
   background-color: $gray60;
   margin-bottom: 1em;
 }
 
-section.two-columns {
+.two-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
@@ -44,13 +44,12 @@ section.two-columns {
     background-color: $gray30;
     width: columns(3); // declare width in columns
   }
-
-  div.right-column {
+  .right-column {
     @include last; // remove margin-right from last element in container
   }
 }
 
-section.six-columns {
+.six-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
@@ -58,42 +57,37 @@ section.six-columns {
     background-color: $gray30;
     width: columns(1); // declare width in columns
   }
-
-  div.sixth-column {
+  .sixth-column {
     @include last; // remove margin-right from last element in container
   }
 }
 
-section.varying-columns {
+.varying-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
   div {
     background-color: $gray30;
   }
-
-  div.first-column {
+  .first-column {
     width: columns(1); // declare width in columns
   }
-
-  div.second-column {
+  .second-column {
     width: columns(2); // declare width in columns
   }
-
-  div.third-column {
+  .third-column {
     width: columns(3); // declare width in columns
   }
-
-  div.third-column {
+  .third-column {
     @include last; // remove margin-right from last element in container
   }
 }
 
-section.nested-columns {
+.nested-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
-  div.nested {
+  .nested {
     @include nesting; // remove padding from parent container and float child elements
     width: columns(3); // declare width in columns
 
@@ -102,29 +96,26 @@ section.nested-columns {
       width: columns(1, 3); // declare width in columns, plus width of parent in columns
       margin-right: gutter(3); // declare gutter with width of parent in columns as argument
     }
-
-    div.third-nested {
+    .third-nested {
       @include last; // remove margin-right from last element in container
     }
   }
-
-  div.unnested {
+  .unnested {
     background-color: $gray30;
     width: columns(3); // declare width in columns
     @include last; // remove margin-right from last element in container
   }
 }
 
-section.more-nested-columns {
+.more-nested-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
-  div.first-unnested {
+  .first-unnested {
     background-color: $gray30;
     width: columns(2); // declare width in columns
   }
-
-  div.nested {
+  .nested {
     @include nesting; // remove padding from parent container and float child elements
     width: columns(3); // declare width in columns
 
@@ -133,40 +124,36 @@ section.more-nested-columns {
       width: columns(1, 3); // declare width in columns, plus width of parent in columns
       margin-right: gutter(3); // declare gutter with width of parent in columns as argument
     }
-
-    div.second-nested {
+    .second-nested {
       width: columns(2, 3); // declare width in columns, plus width of parent in columns
       @include last; // remove margin-right from last element in container
     }
   }
-
-  div.second-unnested {
+  .second-unnested {
     background-color: $gray30;
     width: columns(1); // declare width in columns
     @include last; // remove margin-right from last element in container
   }
 }
 
-section.offset-columns {
+.offset-columns {
   background-color: $gray10;
   margin-bottom: 1em;
 
   div {
     background-color: $gray30;
   }
-
-  div.first-offset {
+  .first-offset {
     @include offset(left, 1); // set direction of offset and number of columns
     width: columns(1); // declare width in columns
   }
-
-  div.second-offset {
+  .second-offset {
     @include offset(right, 2); // set direction of offset and number of columns
     width: columns(2); // declare width in columns
   }
 }
 
-footer.credit {
+[role="contentinfo"] {
   background-color: $gray10;
   text-align: center;
 

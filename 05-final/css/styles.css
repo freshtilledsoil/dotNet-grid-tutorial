@@ -29,172 +29,172 @@ body {
   padding: 0 1em;
   margin: 0; }
 
-div.container {
+.container {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0; }
 
-section.two-columns,
-section.six-columns,
-section.varying-columns,
-section.nested-columns,
-section.more-nested-columns,
-section.offset-columns {
+.two-columns,
+.six-columns,
+.varying-columns,
+.nested-columns,
+.more-nested-columns,
+.offset-columns {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   zoom: 1;
   padding: 0; }
-  section.two-columns:before, section.two-columns:after,
-  section.six-columns:before,
-  section.six-columns:after,
-  section.varying-columns:before,
-  section.varying-columns:after,
-  section.nested-columns:before,
-  section.nested-columns:after,
-  section.more-nested-columns:before,
-  section.more-nested-columns:after,
-  section.offset-columns:before,
-  section.offset-columns:after {
+  .two-columns:before, .two-columns:after,
+  .six-columns:before,
+  .six-columns:after,
+  .varying-columns:before,
+  .varying-columns:after,
+  .nested-columns:before,
+  .nested-columns:after,
+  .more-nested-columns:before,
+  .more-nested-columns:after,
+  .offset-columns:before,
+  .offset-columns:after {
     content: "";
     display: table; }
-  section.two-columns:after,
-  section.six-columns:after,
-  section.varying-columns:after,
-  section.nested-columns:after,
-  section.more-nested-columns:after,
-  section.offset-columns:after {
+  .two-columns:after,
+  .six-columns:after,
+  .varying-columns:after,
+  .nested-columns:after,
+  .more-nested-columns:after,
+  .offset-columns:after {
     clear: both; }
-  section.two-columns > div,
-  section.six-columns > div,
-  section.varying-columns > div,
-  section.nested-columns > div,
-  section.more-nested-columns > div,
-  section.offset-columns > div {
+  .two-columns > div,
+  .six-columns > div,
+  .varying-columns > div,
+  .nested-columns > div,
+  .more-nested-columns > div,
+  .offset-columns > div {
     float: left;
     margin-right: 2%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-header.banner {
+[role="banner"] {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
 
 section div {
   padding: 1em; }
 
-section.hero {
+.hero {
   height: 14em;
   background-color: #666666;
   margin-bottom: 1em; }
 
-section.two-columns {
+.two-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.two-columns div {
+  .two-columns div {
     background-color: #b3b3b3;
     width: 49%; }
-  section.two-columns div.right-column {
+  .two-columns .right-column {
     margin-right: 0;
     float: right; }
 
-section.six-columns {
+.six-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.six-columns div {
+  .six-columns div {
     background-color: #b3b3b3;
     width: 15%; }
-  section.six-columns div.sixth-column {
+  .six-columns .sixth-column {
     margin-right: 0;
     float: right; }
 
-section.varying-columns {
+.varying-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.varying-columns div {
+  .varying-columns div {
     background-color: #b3b3b3; }
-  section.varying-columns div.first-column {
+  .varying-columns .first-column {
     width: 15%; }
-  section.varying-columns div.second-column {
+  .varying-columns .second-column {
     width: 32%; }
-  section.varying-columns div.third-column {
+  .varying-columns .third-column {
     width: 49%; }
-  section.varying-columns div.third-column {
+  .varying-columns .third-column {
     margin-right: 0;
     float: right; }
 
-section.nested-columns {
+.nested-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.nested-columns div.nested {
+  .nested-columns .nested {
     padding: 0;
     width: 49%; }
-    section.nested-columns div.nested > div {
+    .nested-columns .nested > div {
       float: left;
       margin-right: 2%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    section.nested-columns div.nested div {
+    .nested-columns .nested div {
       background-color: gray;
       width: 30.61224%;
       margin-right: 4.08163%; }
-    section.nested-columns div.nested div.third-nested {
+    .nested-columns .nested .third-nested {
       margin-right: 0;
       float: right; }
-  section.nested-columns div.unnested {
+  .nested-columns .unnested {
     background-color: #b3b3b3;
     width: 49%;
     margin-right: 0;
     float: right; }
 
-section.more-nested-columns {
+.more-nested-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.more-nested-columns div.first-unnested {
+  .more-nested-columns .first-unnested {
     background-color: #b3b3b3;
     width: 32%; }
-  section.more-nested-columns div.nested {
+  .more-nested-columns .nested {
     padding: 0;
     width: 49%; }
-    section.more-nested-columns div.nested > div {
+    .more-nested-columns .nested > div {
       float: left;
       margin-right: 2%;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    section.more-nested-columns div.nested div {
+    .more-nested-columns .nested div {
       background-color: gray;
       width: 30.61224%;
       margin-right: 4.08163%; }
-    section.more-nested-columns div.nested div.second-nested {
+    .more-nested-columns .nested .second-nested {
       width: 65.30612%;
       margin-right: 0;
       float: right; }
-  section.more-nested-columns div.second-unnested {
+  .more-nested-columns .second-unnested {
     background-color: #b3b3b3;
     width: 15%;
     margin-right: 0;
     float: right; }
 
-section.offset-columns {
+.offset-columns {
   background-color: #e6e6e6;
   margin-bottom: 1em; }
-  section.offset-columns div {
+  .offset-columns div {
     background-color: #b3b3b3; }
-  section.offset-columns div.first-offset {
+  .offset-columns .first-offset {
     float: left;
     margin-left: 17%;
     width: 15%; }
-  section.offset-columns div.second-offset {
+  .offset-columns .second-offset {
     float: right;
     margin-right: 34%;
     width: 32%; }
 
-footer.credit {
+[role="contentinfo"] {
   background-color: #e6e6e6;
   text-align: center; }
-  footer.credit p {
+  [role="contentinfo"] p {
     margin: 0; }
